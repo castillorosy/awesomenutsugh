@@ -9,9 +9,9 @@ game.PlayScreen = me.ScreenObject.extend({
 //helps it look at as far as maps
                 me.levelDirector.loadLevel("level01");
                 
-                resetPlayer: (0, 420);
+                this.resetPlayer(0, 420);
                 
-                var gamemanager = me.pool.pull("GameaManager", 0, 0, {});
+                var gamemanager = me.pool.pull("GameManager", 0, 0, {});
                 me.game.world.addChild(gamemanager, 0);
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
                 me.input.bindKey(me.input.KEY.LEFT, "left");
